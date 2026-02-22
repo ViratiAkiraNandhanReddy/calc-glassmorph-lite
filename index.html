@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SEO -->
+<title>Glassmorphism Calculator – Free Online Stylish Calculator</title>
+<meta name="description" content="Free premium glassmorphism calculator with history, keyboard support, and beautiful nature background. Fast, responsive, and modern online calculator.">
+<meta name="keywords" content="Virati Akiranandhan Reddy, virati akiranandhan reddy, VIRATI AKIRANANDHAN REDDY, viratiakiranandhanreddy, ViratiAkiraNandhanReddy, calculator, glassmorphism calculator, online calculator, stylish calculator, web calculator">
+<meta name="author" content="Virati Akiranandhan Reddy">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Glassmorphism Calculator">
+<meta property="og:description" content="Modern stylish calculator with glass UI and history support">
+<meta property="og:type" content="website">
+
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<button class="glass toggle-history" onclick="toggleHistory()">Toggle History</button>
+
+<main class="app-container">
+
+<section class="calculator glass">
+<div class="display">
+<div class="previous-operand" id="previous-operand"></div>
+<div class="current-operand" id="current-operand">0</div>
+</div>
+
+<div class="buttons">
+<button class="span-2 danger" onclick="calculator.clear()">AC</button>
+<button onclick="calculator.delete()">DEL</button>
+<button class="operator" onclick="calculator.chooseOperation('/')">÷</button>
+
+<button onclick="calculator.appendNumber('7')">7</button>
+<button onclick="calculator.appendNumber('8')">8</button>
+<button onclick="calculator.appendNumber('9')">9</button>
+<button class="operator" onclick="calculator.chooseOperation('*')">×</button>
+
+<button onclick="calculator.appendNumber('4')">4</button>
+<button onclick="calculator.appendNumber('5')">5</button>
+<button onclick="calculator.appendNumber('6')">6</button>
+<button class="operator" onclick="calculator.chooseOperation('-')">−</button>
+
+<button onclick="calculator.appendNumber('1')">1</button>
+<button onclick="calculator.appendNumber('2')">2</button>
+<button onclick="calculator.appendNumber('3')">3</button>
+<button class="operator" onclick="calculator.chooseOperation('+')">+</button>
+
+<button class="span-2" onclick="calculator.appendNumber('0')">0</button>
+<button onclick="calculator.appendNumber('.')">.</button>
+<button class="operator" onclick="calculator.compute()">=</button>
+</div>
+</section>
+
+<aside class="history-panel glass hidden" id="history-panel">
+<div class="history-header">
+<h2>History</h2>
+<button class="clear-history-btn" onclick="calculator.clearHistory()">Clear</button>
+</div>
+<div class="history-list" id="history-list"></div>
+</aside>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+  </html>
